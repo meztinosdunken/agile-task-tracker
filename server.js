@@ -9,7 +9,9 @@ app.use(express.json());
 // Connect to MongoDB
 mongoose.connect(MONGO_URI, {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  socketTimeoutMS: 45000,
+  keepAlive: true
 }).then(() => {
   console.log('Connected to MongoDB');
 }).catch(error => {
