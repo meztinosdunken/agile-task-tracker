@@ -7,4 +7,3 @@ built/
 *.log
 coverage/
 build/
-.history/
